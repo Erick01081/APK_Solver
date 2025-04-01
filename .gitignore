@@ -36,3 +36,31 @@ yarn-error.*
 *.tsbuildinfo
 
 app-example
+
+# Android
+android/.gradle/
+android/.idea/
+android/.cxx/
+android/.externalNativeBuild/
+android/app/build/
+android/build/
+android/local.properties
+android/gradle/
+android/gradle-wrapper.properties
+
+# iOS
+ios/build/
+ios/Pods/
+ios/Podfile.lock
+ios/Runner.xcworkspace/
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+fastlane/metadata
+fastlane/README.md
+fastlane/Deliverfile
+fastlane/Appfile
+fastlane/Matchfile
