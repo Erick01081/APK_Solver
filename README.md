@@ -1,50 +1,74 @@
-# Welcome to your Expo app 👋
+# 📱 APK Solver
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+**APK Solver** es una aplicación móvil que conecta personas que ofrecen servicios básicos con quienes los necesitan, de manera rápida, segura y eficiente. Está diseñada para reducir la informalidad en el mercado laboral, facilitando la contratación directa de trabajadores independientes sin intermediarios costosos. 
 
-## Get started
+La aplicación permite:
+- Buscar y ofrecer servicios (domésticos, técnicos, etc.).
+- Contratar de forma segura gracias a un sistema de verificación y calificaciones.
+- Integrar pagos digitales y suscripciones premium.
+- Fomentar el empleo local y el emprendimiento independiente.
 
-1. Install dependencies
+---
+
+## Tecnologías utilizadas
+
+A continuación se listan las principales tecnologías y herramientas usadas en el desarrollo:
+
+| Tecnología             | Uso principal                                                                 |
+|------------------------|-------------------------------------------------------------------------------|
+| React Native           | Framework principal para crear apps móviles multiplataforma                  |
+| Expo                   | Plataforma para construir y probar apps con React Native                     |
+| TypeScript             | Tipado estático para mejorar la mantenibilidad del código                    |
+| React Navigation       | Manejo de navegación entre pantallas                                          |
+| Context API            | Gestión de estado global (ej. temas visuales)                                 |
+| Hooks personalizados   | Reutilización de lógica funcional (modo oscuro, temas, etc.)                  |
+| Themed Components      | Componentes visuales adaptativos al modo claro/oscuro                        |
+| Haptics                | Retroalimentación háptica en botones y pestañas                              |
+| Parallax ScrollView    | Scroll con efecto visual interactivo                                          |
+| Script JS (Node)       | Automatización de limpieza y reinicio del proyecto (`reset-project.js`)       |
+| Pruebas unitarias      | Verificación funcional de componentes (`__tests__`)                           |
+
+---
+
+## Estructura del Proyecto
+
+| Carpeta        | Descripción                                                                 |
+|----------------|-----------------------------------------------------------------------------|
+| `app/`         | Pantallas de la aplicación y configuración de navegación                    |
+| `assets/`      | Recursos estáticos como imágenes y fuentes                                  |
+| `components/`  | Componentes reutilizables (temas, botones, pestañas, animaciones, etc.)     |
+| `context/`     | Contexto global para manejar el tema visual (oscuro/claro)                  |
+| `data/`        | Datos precargados como listas de trabajos u ofertas                         |
+| `hooks/`       | Hooks personalizados (modo oscuro, tema dinámico, etc.)                     |
+| `scripts/`     | Script auxiliar para resetear el proyecto                                   |
+
+---
+
+## Cómo ejecutar el proyecto
+
+1. Clona el repositorio:
+
+```bash
+git clone https://github.com/Erick01081/APK_Solver.git
+cd APK_Solver
+```
+
+2. Instala las dependencias:
 
    ```bash
    npm install
    ```
 
-2. Start the app
-
+3. Ejecuta el proyecto con Expo:
+   
    ```bash
     npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+
+Podrás usar diferentes opciones para abrir la aplicación tal como:
 
 - [development build](https://docs.expo.dev/develop/development-builds/introduction/)
 - [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
 - [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- [Expo Go](https://expo.dev/go)
