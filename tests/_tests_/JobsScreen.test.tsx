@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, waitFor, fireEvent } from '@testing-library/react-native';
-import JobsScreen from '../(tabs)/index';
+import JobsScreen from '../../app/(app)/(tabs)/index';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import fetchMock from 'jest-fetch-mock';
 
