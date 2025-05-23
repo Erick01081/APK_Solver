@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, fireEvent, waitFor, act } from '@testing-library/react-native';
-import PostJob from '../(tabs)/post'; // Ajustar ruta según tu estructura
+import PostJob from '../../app/(app)/(tabs)/post'; // Ajustar ruta según tu estructura
 import * as ImagePicker from 'expo-image-picker';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Alert } from 'react-native';

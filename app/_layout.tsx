@@ -1,26 +1,38 @@
-import { useEffect } from 'react';
 import { Stack } from 'expo-router';
-import { StatusBar } from 'expo-status-bar';
-import { ThemeProvider } from '../context/theme';
+import { AuthProvider } from './context/AuthContext';
+import { useEffect } from 'react';
+import { useRouter, useSegments } from 'expo-router';
+import { useAuth } from './context/AuthContext';
 
-declare global {
-  interface Window {
-    frameworkReady?: () => void;
-  }
+function RootLayoutNav() {
+  const { isAuthenticated } = useAuth();
+  const segments = useSegments();
+  const router = useRouter();
+
+  useEffect(() => {
+    const inAuthGroup = segments[0] === '(auth)';
+
+    if (!isAuthenticated && !inAuthGroup) {
+      // Redirigir a login si no está autenticado
+      router.replace('/login');
+    } else if (isAuthenticated && inAuthGroup) {
+      // Redirigir a la página principal si está autenticado
+      router.replace('/');
+    }
+  }, [isAuthenticated, segments]);
+
+  return (
+    <Stack>
+      <Stack.Screen name="index" options={{ headerShown: false }} />
+      <Stack.Screen name="login" options={{ headerShown: false }} />
+    </Stack>
+  );
 }
 
 export default function RootLayout() {
-  useEffect(() => {
-    window.frameworkReady?.();
-  }, []);
-
   return (
-    <ThemeProvider>
-      <Stack screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="(auth)" options={{ headerShown: false }} />
-        <Stack.Screen name="(app)" options={{ headerShown: false }} />
-      </Stack>
-      <StatusBar style="auto" />
-    </ThemeProvider>
+    <AuthProvider>
+      <RootLayoutNav />
+    </AuthProvider>
   );
 }
