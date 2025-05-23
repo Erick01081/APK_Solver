@@ -82,7 +82,7 @@ export default function JobsScreen() {
       setIsLoading(true);
       try {
         const token = await AsyncStorage.getItem('token');
-        const response = await fetch('http://localhost:8080/jobs', {
+        const response = await fetch('http://backsolver-8106099.us-east-2.elb.amazonaws.com/jobs', {
           headers: {
             Authorization: `Bearer ${token}`,
             'Content-Type': 'application/json',

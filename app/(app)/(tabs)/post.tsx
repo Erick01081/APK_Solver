@@ -178,7 +178,7 @@ export default function PostJob() {
 
       console.log('Datos a enviar:', JSON.stringify(jobData, null, 2));
 
-      const response = await fetch('http://localhost:8080/jobs', {
+      const response = await fetch('http://backsolver-8106099.us-east-2.elb.amazonaws.com/jobs', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,

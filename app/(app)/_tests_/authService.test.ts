@@ -23,7 +23,7 @@ describe('Login Functionality', () => {
 
     await login('test@example.com', 'password123');
 
-    expect(fetch).toHaveBeenCalledWith('http://localhost:8080/auth/login', {
+    expect(fetch).toHaveBeenCalledWith('http://backsolver-8106099.us-east-2.elb.amazonaws.com/auth/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ username: 'test@example.com', password: 'password123' }),

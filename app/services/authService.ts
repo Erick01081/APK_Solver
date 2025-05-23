@@ -1,5 +1,5 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
-const API_BASE_URL = 'http://localhost:8080'; // por ejemplo, http://192.168.0.10:8080
+const API_BASE_URL = 'http://backsolver-8106099.us-east-2.elb.amazonaws.com'; // por ejemplo, http://192.168.0.10:8080
 
 export async function login(username: string, password: string) {
     const response = await fetch(`${API_BASE_URL}/auth/login`, {
